@@ -1,0 +1,1 @@
+function waterFloat(t,n,a){var e=t,o=function(t,n,a){t.animate({top:"+=8"},n,"linear",function(){t.css({"-webkit-transform":"rotate("+a+"deg)"}),t.animate({top:"-=8"},n,"linear",function(){t.css({"-webkit-transform":"rotate(-"+a+"deg)"}),o(t,n,a)})})};o(e,n,a)}
