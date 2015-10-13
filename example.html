@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.btn{
+background:teal;
+height:40px;
+width:100px;
+position:relative;
+border:0px;
+border-radius:5px;
+color:white;
+-webkit-transform: rotate(0deg);
+}
+</style>
+<script src= "./jquery.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
+<script  src="./waterFloat.js"></script>
+<script>
+$(document).ready(function(){
+$("#cont").hide( "explode", {pieces: 9}, 2000 );
+$('#cont').effect( "bounce", {times:3}, 300 );
+	 var b1 = $('#b1');
+	 var b2 = $('#b2');
+	 var b3 = $('#b3');
+	 var b4 = $('#b4'); 
+	 var b5 = $('#b5');
+	 var b6 = $('#b6');
+	 var b7 = $('#b7');
+	   var p1 = new waterFloat(b1,900,1);
+	   var p2 = new waterFloat(b2,700,1);
+	   var p3 = new waterFloat(b3,800,1);
+	   var p4 = new waterFloat(b4,900,1);
+	   var p5 = new waterFloat(b5,700,1);
+	   var p6 = new waterFloat(b6,800,1);
+	   var p7 = new waterFloat(b7,700,1);
+   });
+</script>
+</head>
+	<body>
+	<button class="btn" id="b1"  >Home</button>
+	</button><button id="b2" class="btn"  >About</button>
+	</button><button id="b3" class="btn"  >Product</button>
+	<button id="b4" class="btn"  >Demo</button>
+	<button id="b5" class="btn"  >Testimonials</button>
+	<button id="b6" class="btn"  >Contact Us</button>
+	<button id="b7" class="btn"  >Carrers</button>
+	<div id="cont">
+	</div>
+</body>
+</html>
