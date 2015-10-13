@@ -13,6 +13,6 @@ step2: initilize parameters to send and create new object for waterFloat.
       
 Note: before using we have to load Jquery.
 
-see example for better understanding
+see example for better understanding and usage.
     
 
