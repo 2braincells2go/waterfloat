@@ -5,7 +5,7 @@ step1: get the disired element to be float.
     
       var elem = $('#btn1'); // jquery selector to get a specific element with ID
       
-step2: initilize parameters to sent and create new object for waterFloat.
+step2: initilize parameters to send and create new object for waterFloat.
 
       var time = 900; //time in milli seconds
       var degrees = 1; //angle of degrees to float
