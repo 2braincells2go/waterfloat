@@ -1,10 +1,12 @@
-# waterfloat
+# waterFloat
 A simple Jquery Plugin to animate a div to give float effect as it floats on water, like a wooden log floats on water.
 #Usage
 step1: get the disered element to be float.
     
       var elem = $('#btn1'); // jquery selector to get a specific element with ID
+      
 step2: initilize parameters to sent and create new object for waterFloat.
+
       var time = 900; //time in milli seconds
       var degrees = 1; //angle of degrees to float
       var waterfloat = new waterFloat(elem,time,degrees);
