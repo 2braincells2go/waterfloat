@@ -1,1 +1,1 @@
-function waterFloat(t,n,a){var e=t,o=function(t,n,a){t.animate({top:"+=8"},n,"linear",function(){t.css({"-webkit-transform":"rotate("+a+"deg)"}),t.animate({top:"-=8"},n,"linear",function(){t.css({"-webkit-transform":"rotate(-"+a+"deg)"}),o(t,n,a)})})};o(e,n,a)}
+function waterFloat(t,n,a,e){var o=t,i=function(t,n,a,e){t.animate({top:"+="+e},n,"linear",function(){t.css({"-webkit-transform":"rotate("+a+"deg)"}),t.animate({top:"-="+e},n,"linear",function(){t.css({"-webkit-transform":"rotate(-"+a+"deg)"}),i(t,n,a,e)})})};i(o,n,a,e)}
