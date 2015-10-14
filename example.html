@@ -18,22 +18,20 @@ color:white;
 <script  src="./waterFloat.js"></script>
 <script>
 $(document).ready(function(){
-$("#cont").hide( "explode", {pieces: 9}, 2000 );
-$('#cont').effect( "bounce", {times:3}, 300 );
-	 var b1 = $('#b1');
-	 var b2 = $('#b2');
-	 var b3 = $('#b3');
-	 var b4 = $('#b4'); 
-	 var b5 = $('#b5');
-	 var b6 = $('#b6');
-	 var b7 = $('#b7');
-	   var p1 = new waterFloat(b1,900,1);
-	   var p2 = new waterFloat(b2,700,1);
-	   var p3 = new waterFloat(b3,800,1);
-	   var p4 = new waterFloat(b4,900,1);
-	   var p5 = new waterFloat(b5,700,1);
-	   var p6 = new waterFloat(b6,800,1);
-	   var p7 = new waterFloat(b7,700,1);
+	var b1 = $('#b1');
+	var b2 = $('#b2');
+	var b3 = $('#b3');
+	var b4 = $('#b4'); 
+	var b5 = $('#b5');
+	var b6 = $('#b6');
+	var b7 = $('#b7');
+	var p1 = new waterFloat(b1,900,1,8);
+	var p2 = new waterFloat(b2,700,1,8);
+	var p3 = new waterFloat(b3,800,1,10);
+	var p4 = new waterFloat(b4,900,1,8);
+	var p5 = new waterFloat(b5,700,1,8);
+	var p6 = new waterFloat(b6,800,1,10);
+	var p7 = new waterFloat(b7,700,1,8);
    });
 </script>
 </head>
