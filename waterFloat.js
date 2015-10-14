@@ -5,7 +5,7 @@ var runIt = function (elm,t,d,v) {
 			elm.css({'-webkit-transform' : 'rotate('+d+'deg)'});
 			elm.animate({top:'-='+v},t,"linear",function(){
 				elm.css({'-webkit-transform' : 'rotate(-'+d+'deg)'});
-				runIt(elm,t,d);
+				runIt(elm,t,d,v);
 			});
 	   });
    }
