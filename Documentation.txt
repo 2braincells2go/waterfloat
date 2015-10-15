@@ -1,0 +1,108 @@
+JSQL Documentation
+JSQL main purpose is to retrieve desired data with SQL style of input to query large JSON files (database) which solves so many problems of programmers.
+
+JSQL style of sql follows certain rules where we can run javascript functions inside JSQL quires where it gives efficiency of processing the query on specified datasource. 
+
+Consider the following json object as DATABASE where we can define table names inside that.
+
+var data=
+	{employee:
+		[{"name":"shiva","company":"cognizant","salary":25000,"age":23},
+		{"name":"sudhir","company":"cognizant","salary":30000,"age":23},
+		{"name":"voona","company":"miracle","salary":20000,"age":22}
+		]
+	};
+
+Now we will see how to use the library
+
+var jsql = new JSQL(); // this creates JSQL object
+jsql.setDataBase(data); // to set the data in json format as database
+var res = jsql.query(“select * from company”);// this method pasre the sql stores the result in res variable
+
+
+if u want to display the result in table pass the result ‘res’ variable to jsql.echoResult(res); to get resultant string in HTML table
+
+Here are some some rules of writing JSQL style of sql
+ You can use caps and small but everything will be taken in small except the column names
+ You can multiple spaces in the query.
+ Can use “*” or column names followed by “,” but should not give any spaces in columns section and column names should be exact what we define in Json Ojbect.
+ After where condition followed by column name you can use any logical function or javscript string matching function or any condition that you can give in javacript.
+
+Syntax : where <column-name><space><operatot or method with value>
+
+Example: where company .match(‘co’)
+		 Where salary >=25000
+
+All these rules are only to increase the efficiency of code.
+Here are some examples
+Simple select statement :
+select * from employee 
+
+Run JSQL
+
+Resulting 3 Record(s)
+
+name company salary age
+shiva cognizant 25000 23
+sudhir cognizant 30000 23
+voona miracle 20000 22
+
+Simple select statement with column names (column names should be exact what we give in
+Json object ):
+select * from employee 
+
+Run JSQL
+
+Resulting 3 Record(s)
+
+name company
+shiva cognizant
+sudhir cognizant
+voona miracle
+
+The where Clause :
+
+Coluum name should followed by where and a space and then logical operator with value or
+any javascript function which behaves like a condition.
+Example if we want to use LIKE operator here we have to use .match(‘reg exp’) in place of
+condition.
+
+select name,company,salary from employee where salary >=25000
+
+Run JSQL
+
+Resulting 2 Record(s)
+name company salary
+shiva cognizant 25000
+sudhir cognizant 30000
+
+
+select * from employee where company .match('mi')
+Run JSQL
+Resulting 1 Records
+name company salary age
+voona miracle 20000 22
+Order By:
+select * from employee where company .match('mi') ORDERBY 3 DESC
+
+Run JSQL
+
+Resulting 3 Record(s)
+
+name company salary age
+sudhir cognizant 30000 23
+shiva cognizant 25000 23
+voona miracle 20000 22
+
+select * from employee where company .match('mi') ORDERBY 3 asc
+
+Run JSQL
+
+Resulting 3 Record(s)
+
+name company salary age
+voona miracle 20000 22
+shiva cognizant 25000 23
+sudhir cognizant 30000 23
+
+For better understanding see the example.html file and run these queries.
